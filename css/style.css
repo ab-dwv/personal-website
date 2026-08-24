@@ -1,3 +1,13 @@
 body{
-    background-color: blueviolet;
+    background-color: gray;
+    font-family: monospace;
 }
+header{
+background-color: aqua;
+    padding: 5%;
+}
+footer{
+    background-color: pink;
+    padding: 1%;
+}
+
