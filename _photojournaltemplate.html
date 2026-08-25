@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>soft flash — a photo journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <main class="shell">
+      <header class="masthead">
+        <p class="eyebrow">✦ PERSONAL HOMEPAGE / EST. 2003 ✦</p>
+        <h1><span>soft</span> flash</h1>
+        <p class="tagline">a little collection of places, faces &amp; accidental magic</p>
+        <nav aria-label="Main navigation">
+          <a class="active" href="#journal">PHOTO LOG</a><a href="#about">ABOUT ME</a><a href="#guestbook">GUESTBOOK</a>
+        </nav>
+      </header>
+
+      <section class="marquee-wrap" aria-label="Announcement">
+        <div class="marquee">★ welcome to my photo journal ★ updates whenever the film gets developed ★ please sign the guestbook ★</div>
+      </section>
+
+      <section class="intro" id="about">
+        <div class="pixel-heart">♥</div>
+        <div>
+          <h2>hello, internet friend!</h2>
+          <p>I keep tiny memories here so they do not slip through the cracks. Click a picture, read a note, leave with something warm.</p>
+        </div>
+        <div class="counter"><b id="visitor-count">001337</b><span>cool people<br />visited</span></div>
+      </section>
+
+      <section class="journal" id="journal">
+        <div class="section-title"><span>/// PHOTO LOG ///</span><small>latest transmissions</small></div>
+        <div class="entries" id="entries"></div>
+      </section>
+
+      <section class="add-entry" id="guestbook">
+        <div class="window-bar"><span>new_memory.exe</span><span>_ □ ×</span></div>
+        <form id="journal-form">
+          <h2>add something to the pile</h2>
+          <p class="form-note">Photos stay in this browser only — your own tiny corner of the web.</p>
+          <label>PHOTO <input id="photo" type="file" accept="image/*" /></label>
+          <label>DATE / PLACE <input id="entry-title" type="text" maxlength="70" placeholder="august 26, somewhere sunny" required /></label>
+          <label>YOUR LITTLE NOTE <textarea id="entry-note" maxlength="400" placeholder="what happened here?" required></textarea></label>
+          <button type="submit">UPLOAD MEMORY ↗</button>
+        </form>
+      </section>
+
+      <footer>
+        <p>made with too much feeling &amp; a slow connection</p>
+        <span>© <span id="year"></span> soft flash</span>
+      </footer>
+    </main>
+    <template id="entry-template">
+      <article class="entry">
+        <div class="polaroid"><img alt="Journal photograph" /><span class="tape"></span></div>
+        <div class="entry-copy"><p class="entry-meta"></p><h3></h3><p class="entry-note"></p><button class="delete" title="Remove this entry">× delete</button></div>
+      </article>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
