@@ -1,77 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> personal-website </title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Pulse, a slow newsletter by Abhishek Dwivedi.">
+  <title>The Pulse — By Abhishek Dwivedi</title>
+  <!-- Web fonts add a bookish headline voice while retaining robust local fallbacks. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1> The Something | By Abhishek Dwivedi
-        </h1>
-        <p>Student, Programmer, Writer?</p>
-        <nav>
-            <a href="index.html">HOME </a>
-            <a href="index.html">POSTS </a>
-            <a href="aboutme.html">ABOUT ME </a>
+  <!-- The header stays intentionally spare, echoing an early personal homepage. -->
+  <header class="banner">
+    <div class="site-shell banner-inner">
+      <p class="eyebrow">NEWSLETTER AND EXPERIMENTATION</p>
+      <h1><a href="index.html">The Pulse</a></h1>
+      <p class="tagline">A little bit of everything</p>
+    </div>
+  </header>
 
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="site-shell nav-inner">
+      <a href="./posts.html">Posts</a>
+      <a href="./gallery.html">Photo Gallery</a>
+      <a href="./about.html">About Me</a>
+    </div>
+  </nav>
+
+  <main class="site-shell">
+    <section class="featured-section" aria-labelledby="featured-heading">
+      <p class="section-label" id="featured-heading">FEATURED POST</p>
+      <!-- A CSS-painted thumbnail keeps this page fully portable and image-free. -->
+      <article class="feature-card">
+        <div class="thumbnail thumbnail-feature" role="img"
+          aria-label="Abstract placeholder: a quiet orange sun over a dark horizon"></div>
+        <div class="card-copy">
+          <p class="post-meta">09 AUGUST 2026</p>
+          <h2><a href="./posts/sixthpost.html">Great websites, amazing articles to read, and more...</a></h2>
+          <p>I read some interesting articles this week, discovered a lot of new music on this website, found
+            one of the coolest websites out on the internet right now and spent way too much time unfortunately,
+            sleeping...</p>
+          <a class="read-more" href="./posts.html">Read more <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="recent-section" aria-labelledby="recent-heading">
+      <p class="section-label" id="recent-heading">RECENT POSTS</p>
+      <div class="post-row">
+        <article class="small-card">
+          <div class="thumbnail thumbnail-notebook" role="img" aria-label="Abstract placeholder: notebook lines"></div>
+          <p class="post-meta">AUG 23, 2026</p>
+          <h3><a href="./posts/eighthpost.html">I am making my own personal Instagram!</a></h3>
+        </article>
+        <article class="small-card">
+          <div class="thumbnail thumbnail-window" role="img" aria-label="Abstract placeholder: a window at dusk"></div>
+          <p class="post-meta">AUG 16, 2026</p>
+          <h3><a href="./posts/seventhpost.html">This app might just change my life</a></h3>
+        </article>
+        <article class="small-card">
+          <div class="thumbnail thumbnail-stamps" role="img"
+            aria-label="Abstract placeholder: a collection of postage stamps"></div>
+          <p class="post-meta">AUG 09, 2026</p>
+          <h3><a href="./posts/sixthpost.html">Great websites, amazing articles to read, and more...</a></h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery-preview" aria-labelledby="gallery-preview-heading">
+      <p class="section-label" id="gallery-preview-heading">FROM THE PHOTO GALLERY</p>
+      <!-- These quiet CSS scenes keep the recent-photograph strip lightweight. -->
+      <div class="gallery-preview-row">
+        <figure>
+          <img class="thumbnail" src="./images/gallery/heavyrain.jpeg" alt="Out here in the rain">
+          <figcaption> Out here in the rain · SEPT 2026</figcaption>
+        </figure>
+        <figure>
+          <img class="thumbnail" src="./images/gallery/fiftyshades.jpeg" alt="Incredible find at the college library">
+      
+      <figcaption>Incredible find at the college library · JULY 2026</figcaption>
+      </figure>
+      <figure>
+        <img class="thumbnail" src="./images/gallery/thesopranos.jpeg" alt="Weekend over with The Sopranos">
+        <figcaption>Weekend over with The Sopranos · JUNE 2026</figcaption>
+      </figure>
+
+      </div>
+      <a class="read-more" href="./gallery.html">Visit my photo gallery<span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="about-blurb" aria-labelledby="about-heading">
+      <!-- A separate photo block gives this intro the handmade profile-page feel requested. -->
+      <div class="about-preview-aside">
+        <img
+            class="about-preview-photo"
+            src="./images/gallery/pfp.jpeg"
+            alt="Profile Picture"
+        >
+        <!-- <div class="about-preview-photo" role="img" aria-label="Portrait placeholder for Abhishek Dwivedi"></div> -->
+        <!-- Replace these # values with Abhishek's individual profile URLs when available. -->
+        <nav class="social-links" aria-label="Abhishek Dwivedi on social platforms">
+          <a href="https://www.youtube.com/">YouTube</a>
+          <a href="https://open.spotify.com/user/klzw0yyneqc40pu3vtll7ab8o">Spotify</a>
+          <a href="https://x.com/LiggemBallz">Twitter</a>
+          <a href="https://substack.com/@abhixhek">Substack</a>
+          <a href="https://letterboxd.com/abh1xhek/">Letterboxd</a>
         </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Hi</h2>
-            <p>This is a website that, is a personal project of mine and it's still work in progress and I donno what to
-                write here.</p>
+      </div>
+      <div class="about-preview-copy">
+        <p class="section-label" id="about-heading">A LITTLE ABOUT ME</p>
+        <p>Hi I'm Abhishek a Student, Programmer, Writer? The Pulse is where I gather some ideas, images, and other fun
+          stuff and put it all together.</p>
+        <a class="read-more" href="./about.html">More about me <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
 
-        </section>
-        <section class="posts" id="posts">
-            <h2>My posts</h2>
-            <p> Here is the newsletter, read it, enjoy it and try not to judge it too harsh. </p>
-            <ul>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/firstpost.html">In The Beginning (Hello,
-                        World!)</a> 5th July 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/secondpost.html">I'm building a second
-                        brain.</a> 12th July 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/thirdpost.html">This is THE website for
-                        those boring lectures.</a> 19th July 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/fourthpost.html">Why I quit Instagram and
-                        you should too!</a> 27th July 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/fifthpost.html">Which Fictional Character Am I? (also one month complete yay!)</a> 2nd
-                    August 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/sixthpost.html">Don't Mind Me, Just trying
-                        to build competence</a> 9th August 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/seventhpost.html"></a> 16th August 2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/eighthpost.html"></a> 23rd August2026
-                </li>
-                <li>
-                    <a href="https://ab-dwv.github.io/personal-website/posts/ninethpost.html"></a> 30rd August2026
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        Made with Intent by Abhishek &copy; 2026
-    </footer>
+  <footer class="site-footer">
+    <div class="site-shell">
+      <p>The Pulse · 2026</p>
+    </div>
+  </footer>
 
-    <script src="js/script.js"></script>
 </body>
 
 </html>
