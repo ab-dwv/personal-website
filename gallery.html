@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,15 +9,18 @@
   <!-- Shared font import keeps the gallery visually continuous with the homepage. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <!-- The masthead is repeated rather than dynamically injected so every page works without JavaScript. -->
   <header class="banner compact-banner">
     <div class="site-shell banner-inner">
       <h1><a href="index.html">The Pulse</a></h1>
-      <p class="tagline">A slow newsletter about things worth noticing.</p>
+      <p class="tagline">A little bit of everything.</p>
     </div>
   </header>
 
@@ -24,34 +28,43 @@
     <div class="site-shell nav-inner">
       <a href="posts.html">Posts</a>
       <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="essays.html">Essays</a>
       <a href="about.html">About</a>
     </div>
   </nav>
 
   <main class="site-shell page-content">
     <header class="page-intro">
-      <p class="section-label">SCRAPS &amp; SIGHTS</p>
-      <h2>Gallery</h2>
+      <p class="section-label">SIGHTS &amp; EYESORES</p>
+      <h2>Photo Gallery</h2>
       <p>A few visual notes from the road, the desk, and the stretch between them.</p>
     </header>
 
     <!-- Pure-CSS pictures are used as replaceable stand-ins for a future personal photo collection. -->
     <section class="gallery-list" aria-label="Image gallery">
       <figure class="gallery-item">
-        <div class="thumbnail gallery-sun" role="img" aria-label="Abstract placeholder: a sunlit lane"></div>
-        <figcaption>Late sun on an empty lane · 2026</figcaption>
+        <!-- <div class="thumbnail gallery-sun" role="img" aria-label="Abstract placeholder: a sunlit lane"></div> -->
+        <img class="thumbnail" src="./images/gallery/heavyrain.jpeg" alt="Out here in the rain">
+        <figcaption>Out here in the rain · SEPTEMBER 2026</figcaption>
       </figure>
       <figure class="gallery-item">
-        <div class="thumbnail gallery-desk" role="img" aria-label="Abstract placeholder: letters on a desk"></div>
-        <figcaption>Desk, 5:42 p.m. · 2026</figcaption>
+        <!-- <div class="thumbnail gallery-desk" role="img" aria-label="Abstract placeholder: letters on a desk"></div> -->
+        <img class="thumbnail" src="./images/gallery/fiftyshades.jpeg" alt="Incredible find at the college library">
+        <figcaption>Incredible find at the college library · AUGUST 2026</figcaption>
       </figure>
       <figure class="gallery-item">
-        <div class="thumbnail gallery-night" role="img" aria-label="Abstract placeholder: small lights at night"></div>
-        <figcaption>Lights across the water · 2026</figcaption>
+        <!-- <div class="thumbnail gallery-night" role="img" aria-label="Abstract placeholder: small lights at night"></div> -->
+        <img class="thumbnail" src="./images/gallery/thesopranos.jpeg" alt="Weekend over with The Sopranos">
+        <figcaption>Weekend over with The Sopranos · JULY 2026</figcaption>
       </figure>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="site-shell"><p>The Pulse · 2026</p></div></footer>
+  <footer class="site-footer">
+    <div class="site-shell">
+      <p>The Pulse · 2026</p>
+    </div>
+  </footer>
 </body>
+
 </html>
