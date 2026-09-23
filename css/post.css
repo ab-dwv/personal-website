@@ -1,0 +1,117 @@
+/*
+  This file only styles individual posts. It deliberately inherits the shared
+  palette and type variables from style.css rather than defining a new theme.
+*/
+.post-page > header,
+.post-page > footer {
+  width: min(720px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.post-page > header {
+  padding: 38px 0 27px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-heading);
+}
+
+.post-page > header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.post-page > header p {
+  margin: 5px 0 0;
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.post-page > header nav {
+  margin-top: 17px;
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.post-page > header nav a + a::before {
+  content: "|";
+  margin: 0 11px;
+  color: var(--color-border);
+}
+
+/* A constrained measure keeps dense newsletter paragraphs comfortably readable. */
+.post-layout {
+  position: relative;
+  width: min(640px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 57px 0 70px;
+}
+
+/* The article is an understated A4-like sheet; an SVG rule repeats without gradients. */
+.post-page article {
+  position: relative;
+  min-height: 780px;
+  padding: clamp(27px, 6vw, 53px);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='34' viewBox='0 0 100 34'%3E%3Cpath d='M0 33.5H100' stroke='%23d7ded2' stroke-width='.6'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-position: 0 108px;
+  background-size: 100% 34px;
+  border: 1px solid var(--color-border);
+  box-shadow: 4px 4px 0 var(--color-shadow);
+}
+
+.post-page article > * { position: relative; }
+
+.post-page article > h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.post-page article .date {
+  margin: 9px 0 34px;
+  color: var(--color-muted);
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.post-page article p,
+.post-page article li {
+  max-width: 62ch;
+}
+
+.post-page article p { margin: 0 0 1.55em; }
+
+.post-page article ul {
+  margin: 0 0 1.7em;
+  padding-left: 1.35em;
+}
+
+.post-page article li { margin-bottom: 0.85em; }
+.post-page article li > ul { margin: 0.8em 0 0.3em; }
+
+.post-page article .back-link {
+  display: inline-block;
+  margin-top: 17px;
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.post-page > footer {
+  padding: 20px 0 28px;
+  color: var(--color-muted);
+  border-top: 1px dotted var(--color-border);
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+/* Selection intentionally uses the same dusty-rose accent as interactive states. */
+.post-page ::selection {
+  color: var(--color-surface);
+  background: var(--color-accent);
+}
+
+.post-page ::-moz-selection {
+  color: var(--color-surface);
+  background: var(--color-accent);
+}
